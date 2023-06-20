@@ -1,0 +1,1453 @@
+@font-face {
+    font-family: poppinsBold;
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: loraBold;
+    src: url(../fonts/Lora-Bold.ttf);
+}
+@font-face {
+    font-family: laBelle;
+    src: url(../fonts/LaBelleAurore-Regular.ttf);
+}
+@font-face {
+    font-family: lilita;
+    src: url(../fonts/LilitaOne-Regular.ttf);
+}
+@font-face {
+    font-family: lora;
+    src: url(../fonts/Lora-Regular.ttf);
+}
+@font-face {
+    font-family: loraSemiBold;
+    src: url(../fonts/Lora-SemiBold.ttf);
+}
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: poppinsSemiBold;
+    src: url(../fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: robotoBold;
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: pacifico;
+    src: url(../fonts/Pacifico-Regular.ttf);
+}
+:root{
+    --white-color: rgba(255, 255, 255, 1);
+    --primary-color: rgba(0, 117, 37, 1);
+    --hovered-primary-color: rgb(115, 180, 135);
+    --landing-page-background: rgba(0, 117, 37, 0.4);
+    --social-media-icons-color: rgba(15, 49, 26, 1);
+    --landing-page-box-border: rgb(186, 219, 109);
+    --primary-bold-words-color: rgba(0, 117, 37, 0.79);
+    --faded-black-color: rgba(0, 0, 0, 0.88);
+    --grey-site-background-color: rgba(245, 245, 245, 1);
+    --section-heading-color: rgba(15, 49, 26, 1);
+    --sub-heading-color: rgba(0, 117, 37, 0.69);
+    --box-border-color: rgba(0, 117, 37, 0.69);
+    --sign-up-buttons: rgba(0, 117, 37, 0.8);
+    --green-section-background: rgba(145, 188, 158, 1);
+    --talking-ruth-color: rgba(15, 49, 26, 1);
+    --landing-back-page: rgba(145, 188, 158);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100%;
+    align-items: center;
+    background: var(--grey-site-background-color);
+    /* justify-content: center; */
+}
+a{
+    text-decoration: none;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .top-nav{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav .top-nav a{
+    font-size: 15px;
+    color: black;
+    font-family: poppinsBold;
+    transition-duration: 0.3s;
+}
+
+.nav .top-nav a:hover{
+    color: var(--hovered-primary-color);
+}
+
+
+.nav .top-nav .active{
+    color: var(--primary-color);
+}
+
+.nav .top-nav .left-nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav .top-nav .logo img{
+    width: 450px;
+}
+
+.nav .top-nav .right-nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav .top-nav .right-nav-menu button{
+    width: 100px;
+    padding: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    font-family: poppinsBold;
+    font-weight: normal;
+    transition-duration: 0.3s;
+}
+
+.nav .top-nav .right-nav-menu button:hover{
+    background: var(--hovered-primary-color);
+}
+
+.nav .top-nav .menu-icon{
+    display: none;
+}
+
+.nav .top-nav .menu-icon img{
+    /* display: none; */
+    width: 20px;
+}
+
+.nav .down-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background: var(--landing-page-background);
+    padding-top: 7px;
+    padding-bottom: 5px;
+}
+
+.nav .down-nav .social-media-icons{
+    margin-right: 50px;
+    display: flex;
+    gap: 20px;
+    transition-duration: 0.3s;
+}
+
+.nav .down-nav img{
+    width: 25px;
+}
+
+.nav .down-nav img:hover{
+    opacity: 50%;
+}
+
+.landing-page-content{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-page-content .food-image{
+    background-image: url(../images/landing\ page\ food\ image.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: 250px;
+}    
+
+.landing-page-content .background{
+    width: 100vw;
+    height: 620px;
+    background-image: url(../images/landing\ background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing-page-content .landing-ruth{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 60vw;
+    position: absolute;
+    gap: 20px;
+    top: 10%;
+    left: 27%;
+}
+
+.landing-page-content .landing-ruth .talk-box-and-image{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    /* width: 60vw; */
+}
+
+.landing-page-content .landing-ruth .talk-box-and-image .talk-box{
+    background: var(--white-color);
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--landing-page-box-border);
+    border-radius: 5px;
+    width: 400px;
+    height: 280px;
+    margin-bottom: 150px;
+    margin-right: 50px;
+    position: absolute;
+    gap: 5px;
+}
+
+.landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk{
+    display: flex;
+    flex-direction: column;
+    /* height: 300px; */
+    justify-content: space-between;
+}
+
+.landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk .hello{
+    font-size: 45px;
+    font-family: laBelle;
+    font-weight: lighter;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+
+.landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk .i-am-ruth{
+    font-size: 35px;
+    font-family: lilita;
+    font-weight: lighter;
+    overflow: hidden;
+    /* margin-bottom: -30px; */
+}
+
+.landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk .i-am-ruth span{
+    font-size: 45px;
+    color: var(--primary-bold-words-color);
+    transition-duration: 0.3s;
+}
+
+.landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk .i-am-ruth span:hover{
+    color: var(--primary-color);
+}
+
+.landing-page-content .landing-ruth .talk-box-and-image .talk-box p{
+    font-size: 14px;
+    font-family: roboto;
+    font-weight: 600;
+    color: var(--faded-black-color);
+    overflow: hidden;
+}
+.landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk-button{
+    height: 65px;
+}
+.landing-page-content .landing-ruth .talk-box-and-image .talk-box button{
+    width: 150px;
+    padding: 10px;
+    color: var(--white-color);
+    background: var(--primary-bold-words-color);
+    border: none;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+}
+.landing-page-content .landing-ruth .talk-box-and-image .talk-box button:hover{
+    background: var(--primary-color);
+}
+.landing-page-content .landing-ruth .talk-box-and-image .ruth-image-box{
+    width: 450px;
+    min-height: 600px;
+    margin-left: 350px;
+}
+.landing-page-content .landing-ruth .talk-box-and-image .ruth-image-box img{
+    width: 450px;
+    min-height: 600px;
+    border-radius: 5px;
+    border: 2px solid var(--landing-page-box-border);
+}
+
+.landing-page-content .landing-ruth .small-motivation{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    align-items: center;
+    margin-right: 280px;
+}
+
+.landing-page-content .landing-ruth .small-motivation h1{
+    font-family: lilita;
+    font-size: 30px;
+    color: var(--faded-black-color);
+    word-spacing: 1px;
+    font-weight: bolder;
+}
+
+.landing-page-content .landing-ruth .small-motivation p{
+    text-align: center;
+    color: var(--white-color);
+    font-family: poppinsSemiBold;
+    font-size: 14px;
+}
+
+.gains-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    align-items: center;
+    background: var(--grey-site-background-color);
+    background-image: url(../images/fruits.png);
+    background-position: center;
+    background-size: contain;
+    gap: 40px;
+    padding-top: 10px;
+}
+
+.section-heading{
+    color: var(--section-heading-color);
+    font-family: lilita;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.gains-section .gains-boxes{
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gain-box{
+    display: flex;
+    flex-direction: column;
+    background: var(--white-color);
+    width: 25%;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--box-border-color);
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.gain-box-middle{
+    display: flex;
+    flex-direction: column;
+    background: var(--white-color);
+    width: 25%;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--box-border-color);
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+.gain-box img{
+    width: 30px;
+}
+
+.gain-box h2{
+    font-family: lilita;
+    color: var(--sub-heading-color);
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.gain-box p{
+    text-align: center;
+    color: var(--faded-black-color);
+    font-size: 12px;
+    font-family: poppinsBold;
+}
+
+.gain-box-middle img{
+    width: 30px;
+}
+
+.gain-box-middle h2{
+    font-family: lilita;
+    color: var(--sub-heading-color);
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.gain-box-middle p{
+    text-align: center;
+    color: var(--faded-black-color);
+    font-size: 12px;
+    font-family: poppinsBold;
+}
+
+.gain-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin-bottom: 30px;
+}
+
+.gain-button button{
+    background: var(--primary-color);
+    width: 180px;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    color: var(--white-color);
+    font-family: poppinsBold;
+    font-size: 16px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.gain-button button:hover{
+    background: var(--sign-up-buttons);
+}
+
+.did-you-know-section{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.did-you-know-image{
+    width: 35vw;
+    height: 365px;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../images/salad.png);
+    background-size: cover;
+}
+
+.did-you-know-image img{
+    width: 35vw;
+    height: 365px;
+}
+
+.did-you-know-box{
+    width: 65vw;
+    height: 365px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--white-color);
+    background-image: url(../images/know\ fruits.png);
+    background-position: center;
+    background-size: contain;
+}
+.did-you-know-box-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    margin-top: 20px;
+}
+
+.did-you-know-box p{
+    color: var(--faded-black-color);
+    font-size: 16px;
+    font-family: poppinsBold;
+    text-align: center;
+}
+
+.about-ruth-section{
+    display: flex;
+    width: 100vw;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.about-ruth-talk{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-around;
+    background: var(--white-color);
+    background-image: url(../images/about\ ruth\ background.png);
+    background-position: center;
+    background-size: cover;
+    /* height: 600px; */
+    width: 70vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 500px;
+}
+
+.about-ruth-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.about-ruth-content h1 span{
+    color: var(--faded-black-color);
+    overflow: hidden;
+}
+
+.talking-ruth{
+    font-family: labelle;
+    font-weight: normal;
+    color: var(--talking-ruth-color);
+    overflow: hidden;
+}
+
+.about-ruth-content p{
+    color: var(--talking-ruth-color);
+    text-align: center;
+    font-family: poppinsBold;
+    font-size: 15px;
+    
+}
+
+.schedule-ruth-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.schedule-ruth-button button{
+    background: var(--primary-color);
+    width: 200px;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    color: var(--white-color);
+    font-family: poppinsBold;
+    font-size: 16px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.schedule-ruth-button button:hover{
+    background: var(--sign-up-buttons);
+}
+
+.about-ruth-image{
+    width: 30vw;
+    min-height: 500px;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    background-image: url(../images/about\ ruth.png);
+    background-size: cover;
+}
+
+.about-ruth-image img{
+    width: 30vw;
+    height: 500px;
+}
+
+.blog-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    align-items: center;
+    background: var(--grey-site-background-color);
+    background-image: url(../images/blog\ fruits.png);
+    background-position: center;
+    background-size: contain;
+    gap: 40px;
+    margin-top: 0px;
+}
+
+.blog-section-heading{
+    text-align: center;
+    margin-top: 10px;
+}
+.blogs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap: 30px;
+}
+
+.blogs .blog img{
+    width: 90%;
+    border: 1px solid var(--sign-up-buttons);
+    border-radius: 5px;
+}
+
+.blogs .blog p{
+    font-family: pacifico;
+    color: var(--sign-up-buttons);
+}
+
+.blog-button{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-button button{
+    background: var(--sign-up-buttons);
+    color: white;
+    font-family: poppinsBold;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.blog-button button:hover{
+    background: var(--primary-color);
+}
+
+.product{
+    background: var(--white-color);
+    padding: 5px;
+    border: 1px solid var(--sign-up-buttons);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    width: 200px;
+}
+
+.product-image{
+    display: flex;
+    justify-content: center;
+}
+
+.product img{
+    width: 90%;
+    height: 120px;
+}
+
+.product-name-and-price{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.product-name-and-price p{
+    font-family: lilita;
+    color: var(--talking-ruth-color);
+}
+
+.footer-nav{
+    background: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo img{
+    width: 580px;
+}
+
+.footer-menu{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-menu a{
+    font-size: 15px;
+    color: black;
+    font-family: poppinsBold;
+    transition-duration: 0.3s;
+}
+
+.footer-menu a:hover{
+    color: var(--hovered-primary-color);
+}
+
+.left-footer-menu{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.right-footer-menu{
+    display: flex;
+    gap: 10px;    
+    align-items: center;
+}
+
+.left-footer-menu .active{
+    color: var(--primary-color);
+}
+
+.right-footer-menu button{
+    width: 100px;
+    padding: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    font-family: poppinsBold;
+    font-weight: normal;
+    transition-duration: 0.3s;
+}
+
+.right-footer-menu button:hover{
+    background: var(--sign-up-buttons);
+}
+.footer-socials{
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+
+.footer-socials img{
+    width: 50%;
+    opacity: 70%;
+    transition-duration: 0.3s;
+}
+
+.footer-socials img:hover{
+    opacity: 100%;
+}
+
+.developer-section{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.developer-section p{
+    font-family: lilita;
+}
+
+.developer-section p span{
+    color: var(--primary-color);
+}
+
+
+@media screen and (max-width: 1370px)
+{
+    /* body{
+        display: none;
+    } */
+    html{
+        font-size: 80%;
+    }
+    .landing-page-content .landing-ruth{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 60vw;
+        position: absolute;
+        gap: 20px;
+        top: 10%;
+        left: 30%;
+    }
+    
+}
+
+@media screen and (max-width: 1220px)
+{
+
+    .landing-page-content .background{
+        height: 530px;
+    }
+
+    .landing-page-content .landing-ruth{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 60vw;
+        position: absolute;
+        gap: 20px;
+        top: 15%;
+        left: 30%;
+    }
+
+     .landing-page-content .landing-ruth .talk-box-and-image .talk-box{
+        background: var(--white-color);
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border: 2px solid var(--landing-page-box-border);
+        border-radius: 5px;
+        width: 300px;
+        height: 250px;
+        margin-bottom: 150px;
+        /* margin-right: 50px; */
+        position: absolute;
+        
+    }
+    
+   
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk .hello{
+        font-size: 40px;
+        font-family: laBelle;
+        font-weight: lighter;
+        margin-bottom: -20px;
+        overflow: hidden;
+    }
+    
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk .i-am-ruth{
+        font-size: 30px;
+        font-family: lilita;
+        font-weight: lighter;
+        overflow: hidden;
+    }
+    
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk .i-am-ruth span{
+        font-size: 40px;
+        color: var(--primary-bold-words-color);
+        transition-duration: 0.3s;
+    }
+
+    .landing-page-content .landing-ruth .talk-box-and-image .ruth-image-box{
+        width: 350px;
+        min-height: 450px;
+        margin-left: 250px;
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image .ruth-image-box img{
+        width: 350px;
+        min-height: 450px;
+        border-radius: 5px;
+        border: 2px solid var(--landing-page-box-border);
+    }  
+
+    .landing-page-content .landing-ruth .small-motivation{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        align-items: center;
+        margin-right: 200px;
+    }
+    
+    .landing-page-content .landing-ruth .small-motivation h1{
+        font-family: lilita;
+        font-size: 30px;
+        color: var(--faded-black-color);
+        word-spacing: 1px;
+        font-weight: bolder;
+        text-align: center;
+    }
+    
+    .landing-page-content .landing-ruth .small-motivation p{
+        text-align: center;
+        color: var(--white-color);
+        font-family: poppinsSemiBold;
+        font-size: 14px;
+    }
+    
+}
+
+@media screen and (max-width: 1000px){
+    /* body{
+        display: none;
+    } */
+
+    .landing-page-content .landing-ruth .talk-box-and-image .ruth-image-box{
+        width: 250px;
+        min-height: 250px;
+        margin-left: 250px;
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image .ruth-image-box img{
+        width: 250px;
+        min-height: 250px;
+        border-radius: 5px;
+        border: 2px solid var(--landing-page-box-border);
+    } 
+
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box{
+        background: var(--white-color);
+        padding-left: 10px;
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        border: 2px solid var(--landing-page-box-border);
+        border-radius: 5px;
+        width: 250px;
+        height: 210px;
+        margin-bottom: 120px;
+        margin-left: 30px;
+        position: absolute;
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk{
+        height: 250px;
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk .hello{
+        font-size: 30px;
+        font-family: laBelle;
+        font-weight: lighter;
+        margin-bottom: 0px;
+        overflow: hidden;
+    }
+    
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk .i-am-ruth{
+        font-size: 20px;
+        font-family: lilita;
+        font-weight: lighter;
+        overflow: hidden;
+    }
+    
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk .i-am-ruth span{
+        font-size: 30px;
+        color: var(--primary-bold-words-color);
+        transition-duration: 0.3s;
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box p{
+        font-size: 12px;
+        font-family: roboto;
+        font-weight: 600;
+        color: var(--faded-black-color);
+        overflow: hidden;
+        margin-bottom: 10px;
+        /* margin-top: 10px; */
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk-button{
+        overflow: hidden;
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box button{
+        width: 120px;
+        padding: 10px;
+        color: var(--white-color);
+        background: var(--primary-bold-words-color);
+        border: none;
+        border-radius: 5px;
+        transition-duration: 0.3s;
+    }
+    .landing-page-content .background{
+        height: 430px;
+    }
+   
+
+}
+
+@media screen and (max-width: 940px)
+{
+    /* body{
+        display: none;
+    } */
+    .nav .top-nav .menu-icon{
+        display: block;
+        position: absolute;
+        right: 2%;
+        cursor: pointer;
+    }
+    .nav .top-nav .left-nav-menu{
+        display: none;
+    }
+    
+    .nav .top-nav .logo img{
+        width: 450px;
+    }
+    
+    .nav .top-nav .right-nav-menu{
+        display: none;
+    }
+
+    .nav .down-nav .social-media-icons{
+        margin-right: 0px;
+    }
+
+    .landing-page-content .landing-ruth .talk-box-and-image .ruth-image-box{
+        width: 250px;
+        min-height: 250px;
+        margin-left: 200px;
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image .ruth-image-box img{
+        width: 200px;
+        min-height: 300px;
+        border-radius: 5px;
+        border: 2px solid var(--landing-page-box-border);
+    } 
+
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box{
+        background: var(--white-color);
+        padding-left: 10px;
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        border: 2px solid var(--landing-page-box-border);
+        border-radius: 5px;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 50px;
+        margin-left: 30px;
+        position: absolute;
+    }
+    .landing-page-content .food-image{
+        background-image: url(../images/landing\ page\ food\ image.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        min-height: 120px;
+    }    
+    .landing-page-content .landing-ruth{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 60vw;
+        position: absolute;
+        gap: 20px;
+        top: 10%;
+        left: 30%;
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box button{
+        width: 100px;
+        padding: 5px;
+        color: var(--white-color);
+        background: var(--primary-bold-words-color);
+        border: none;
+        border-radius: 5px;
+        transition-duration: 0.3s;
+        margin-top: 10px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 768px)
+{
+    /* body{
+        display: none;
+    } */
+
+    .landing-page-content .food-image{
+        min-height: 100px;
+    } 
+    .landing-page-content .landing-ruth{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 60vw;
+        position: absolute;
+        gap: 20px;
+        top: 10%;
+        left: 30%;
+        
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image{
+        margin-right: 30px;
+        width: 55vw;
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image .ruth-image-box{
+        width: 250px;
+        min-height: 250px;
+        margin-left: 170px;
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image .ruth-image-box img{
+        width: 220px;
+        min-height: 300px;
+        border-radius: 5px;
+        border: 2px solid var(--landing-page-box-border);
+    } 
+
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box{
+        background: var(--white-color);
+        padding-left: 10px;
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        border: 2px solid var(--landing-page-box-border);
+        border-radius: 5px;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 50px;
+        margin-left: 0px;
+        position: absolute;
+    }
+    .landing-page-content .landing-ruth .small-motivation h1{
+        font-size: 25px;     
+    }
+    .landing-page-content .landing-ruth .small-motivation p{
+        font-size: 13px;
+    }
+
+    .section-heading{
+        font-size: 30px;
+    }
+    .gains-section .gains-boxes{
+        flex-direction: column;
+        gap: 12px;
+    }
+    .gain-box{
+        width: 50%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .gain-box-middle{
+        width: 50%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 0px;
+    }
+    .gain-box img{
+        width: 40px;
+    }
+
+    .gain-box-middle img{
+        width: 40px;
+    }
+    .gain-box h2{
+        font-size: 30px;
+    }
+    .gain-box-middle h2{
+        font-size: 30px;
+    }
+    .gain-button button{
+        width: 200px;
+    }
+    .did-you-know-section{
+        flex-direction: column;
+    }
+    .did-you-know-image{
+        width: 100vw;
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+        background-image: url(../images/salad.png);
+        background-size: cover;
+    }
+    
+    .did-you-know-image img{
+        width: 100vw;
+        min-height: 250px;
+    }
+    .did-you-know-box{
+        width: 100vw;
+        min-height: 100px;
+    }
+    .did-you-know-box-content{
+        justify-content: center;
+    }
+    .did-you-know-box p{
+        font-size: 15px;
+    }
+    .about-ruth-section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-ruth-talk{
+        width: 100vw;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .talking-ruth{
+        text-align: center;
+    }
+    .about-ruth-content p{
+        font-size: 14px;
+    }
+    .schedule-ruth-button button{
+        margin-bottom: 5px;
+    }
+    .about-ruth-image{
+        width: 100vw;
+        background-image: url(../images/about\ ruth.png);
+    }
+    
+    
+    .blogs{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .blogs .blog img{
+        width: 40vw;
+        border: 1px solid var(--sign-up-buttons);
+        border-radius: 5px;
+    }
+    .blogs .blog p{
+        font-family: pacifico;
+        color: var(--sign-up-buttons);
+        font-size: 25px;
+    }
+    .blog-button button{
+        width: 200px;
+        font-size: 18px;
+    }
+
+    .product{
+        height: 200px;
+        width: 40vw;
+    }
+    .product img{
+        width: 20vw;
+        height: 80px;
+        margin-top: 5px;
+    }
+    .product-name-and-price p{
+        font-family: lilita;
+        color: var(--talking-ruth-color);
+        font-size: large;
+    }
+    .footer-logo img{
+        width: 80vw;
+    }
+    
+    .footer-menu{
+        display: none;
+        width: 60%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .developer-section p{
+        margin-top: 5px;
+    }
+    .developer-section img{
+        width: 80px;
+    }
+    .footer-socials{
+        width: 60vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;  
+    }
+    
+}
+
+@media screen and (max-width: 428px)
+{
+    .nav .top-nav .logo img{
+        width: 80vw;
+    }
+    .nav .down-nav img{
+        width: 15px;
+    }
+    
+    
+    .landing-page-content .landing-ruth{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        position: absolute;
+        left: 0%;
+        top: 5%;
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image .talk-box{
+        background: var(--white-color);
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+        gap: 20px;
+        border: 2px solid var(--landing-page-box-border);
+        border-radius: 5px;
+        width: 60vw;
+        height: 200px;
+    }
+    .landing-page-content .landing-ruth .talk-box-and-image .ruth-image-box{
+        margin-left: 130px;
+        margin-top: 150px;
+    }
+    .landing-page-content .landing-ruth .small-motivation{
+        margin-right: 0px;
+        padding: 5px;
+    }
+    .landing-page-content .background{
+        height: 550px;
+        background-size: cover;
+        background-repeat: repeat;
+        background: var(--landing-back-page);
+        background-image: url(../images/about\ ruth\ background.png);
+    }
+    .gain-box img{
+        width: 25px;
+    }
+
+    .gain-box-middle img{
+        width: 25px;
+    }
+    .gain-box{
+        width: 80%;
+        margin-bottom: 15px;
+    }
+    .gain-box-middle{
+        width: 80%;
+        margin-bottom: 15px;
+    }
+    .gain-box h2{
+        font-size: 25px;
+    }
+    .gain-box-middle h2{
+        font-size: 25px;
+    }
+    .did-you-know-box-content{
+        gap: 70px;
+        padding: 10px;       
+    }
+    .did-you-know-box p{
+        font-size: 14px;
+    }
+    .about-ruth-talk{
+        height: 600px;
+        padding: 5px;
+    }
+    .about-ruth-image img{
+        height: 200px;
+    }
+    .blogs{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .blog{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .blogs .blog img{
+        width: 60vw;
+    }
+    .product-name-and-price p{
+        font-size: 12px;
+    }
+    .product{
+        height: 120px;
+        margin-bottom: 7px;
+    }
+    .product img{
+        width: 100%;
+        height: 80px;
+        margin-top: 0px;
+    }
+    .blogs .blog p{
+        font-family: pacifico;
+        color: var(--sign-up-buttons);
+        font-size: 15px;
+    }
+    .about-ruth-content p{
+        font-family: poppinsSemiBold;
+        text-align: center;
+    }
+
+    
+}
+
+
+
+
+
+
+
+/*
+
+.landing-page-content .landing-ruth .talk-box-and-image .talk-box .talk .hello{
+    font-size: 45px;
+    font-family: laBelle;
+    font-weight: lighter;
+    margin-bottom: -20px;
+    overflow: hidden;
+}
+
+
+
+*/
+
+
+
+
+
+
